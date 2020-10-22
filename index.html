@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>SimplyMusic</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header id="page-top"></header>
+    <div class="navigation-bar">
+        <button id="myBtn">Prepare to Record</button>
+        <form action="#">
+            <label for="cars">Filter:</label>
+            <select id="filter-drop-down" name="filter-drop-down">
+              <option value="title">Title A-Z</option>
+              <option value="artist">Artist A-Z</option>
+              <option value="length">Length</option>
+              <option value="genre">Genre</option>
+            </select>
+            <input type="submit">
+          </form>
+    </div>
+    <div class = 'main-container'>
+        <table id="table-top">
+            <div>
+                <tr>                   
+                    <th><!--empty cell--></th>
+                    <th>Title</th>
+                    <th>Artist</th>
+                    <th>Length</th>
+                </tr>
+            </div>
+            <div class="songData">
+            </div>
+        </table>
+        <div id='record-box'>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p id="inProgress">Click REC to start recording</p>
+                    <div class="record-control-box">
+                    <button id="record">REC</button>
+                    <button id="stopRecord">STOP</button>
+                    <audio id="recordedAudio" controls></audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/juration.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/record.js"></script>
+</body>
+</html>
