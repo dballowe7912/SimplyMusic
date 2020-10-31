@@ -7,7 +7,6 @@
  *
  */
 
- // Figure how to move juration into it's own file
  (function() {
 
     var UNITS = {
