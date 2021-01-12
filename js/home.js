@@ -58,18 +58,12 @@ const addSongRows = () => {
         let tableRef = document.getElementById('table-top').getElementsByTagName('tbody')[0];
         // adds a song row
         let newRow = tableRef.insertRow();
-        // adds a new cell and play/pause buttons with event listeners
+        // adds an html audio element for each song
         let newCell = newRow.insertCell();
-        let button = document.createElement('button');
-        button.id = 'play.' + i;
-        button.innerHTML = 'Play';
-        button.addEventListener( 'click', playSong );
-        newCell.appendChild(button);
-        button = document.createElement('button');
-        button.id = 'pause.' + i;
-        button.innerHTML = 'Pause';
-        button.addEventListener( 'click', pauseSong );
-        newCell.appendChild(button);
+        let newAudio = document.createElement('audio');
+        newAudio.controls = true;
+        newAudio.src = `${songs[i]['location']}`;
+        newCell.appendChild(newAudio);
         // new cell for title
         newCell = newRow.insertCell();
         let cellEntry = document.createTextNode(`${songs[i]['title']}`);
